@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>LiveClipper</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@600;700&family=Inter:wght@400;600&display=swap">
+<style>
+/* Layout: one narrow reading column, app header band, then About / Terms / Privacy as anchored sections */
+:root {
+  --bg: #faf8fc; --fg: #1d1626; --muted: #625a6e; --line: #e4dcec; --accent: #b0246c; --band: #2c1352; --band-fg: #ffffff;
+  --display: "Space Grotesk", "Segoe UI", system-ui, sans-serif;
+  --body: "Inter", "Segoe UI", system-ui, sans-serif;
+}
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) {
+  --bg: #15101c; --fg: #ece6f3; --muted: #a79fb4; --line: #2e2639; --accent: #f06aa8; --band: #2c1352; --band-fg: #ffffff; color-scheme: dark } }
+:root[data-theme="dark"] {
+  --bg: #15101c; --fg: #ece6f3; --muted: #a79fb4; --line: #2e2639; --accent: #f06aa8; --band: #2c1352; --band-fg: #ffffff; color-scheme: dark }
+body { background: var(--bg); color: var(--fg); font: 16px/1.65 var(--body); }
+.wrap { max-width: 680px; margin: 0 auto; padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px)); }
+header { background: var(--band); color: var(--band-fg); }
+header .wrap { padding-block: 40px 32px; display: flex; flex-direction: column; gap: 8px; }
+h1, h2 { font-family: var(--display); text-wrap: balance; line-height: 1.2; margin: 0; }
+h1 { font-size: 2.2rem; }
+header p { margin: 0; opacity: .85; }
+nav { display: flex; gap: 20px; flex-wrap: wrap; margin-top: 12px; }
+nav a { color: var(--band-fg); font-weight: 600; text-underline-offset: 4px; }
+main .wrap { padding-block: 16px 64px; display: flex; flex-direction: column; }
+section { padding-block: 28px; border-bottom: 1px solid var(--line); scroll-margin-top: 16px; }
+section:last-child { border-bottom: 0; }
+h2 { font-size: 1.45rem; margin-bottom: 10px; }
+.date { color: var(--muted); font-size: .9rem; margin: 0 0 12px; }
+ul { padding-left: 1.2em; }
+li { margin-block: 4px; }
+a { color: var(--accent); }
+a:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+
+body{margin:0}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap">
+    <h1>LiveClipper</h1>
+    <p>A personal desktop tool that turns moments from live gaming streams into vertical clips.</p>
+    <nav><a href="#about">About</a><a href="#terms">Terms of Service</a><a href="#privacy">Privacy Policy</a></nav>
+  </div>
+</header>
+
+<main>
+  <div class="wrap">
+    <section id="about">
+      <h2>About</h2>
+      <p>LiveClipper runs on one Windows PC. It records live streams the owner chooses, cuts short vertical clips of the most exciting moments, and uploads them to the owner's own TikTok drafts and YouTube channel so the owner can review each clip before posting it.</p>
+      <p>It is used only by its owner. It is not sold, offered to the public, or used to post on anyone else's account.</p>
+    </section>
+
+    <section id="terms">
+      <h2>Terms of Service</h2>
+      <p class="date">Last updated 19 November 2026</p>
+      <ul>
+        <li>LiveClipper is a private tool for its owner's own accounts. No one else can sign up or use it.</li>
+        <li>Clips are uploaded as drafts or private videos. The owner reviews every clip and decides whether to publish it.</li>
+        <li>The owner is responsible for what is published, including crediting streamers and respecting the TikTok Terms of Service, the YouTube Terms of Service and copyright.</li>
+        <li>The tool is provided as is, without warranty. It may stop working if a platform changes its service.</li>
+      </ul>
+    </section>
+
+    <section id="privacy">
+      <h2>Privacy Policy</h2>
+      <p class="date">Last updated 19 November 2026</p>
+      <ul>
+        <li><strong>What is accessed:</strong> the owner's basic TikTok profile (to confirm the account) and permission to upload videos to that account's drafts. On YouTube, permission to upload videos to the owner's channel.</li>
+        <li><strong>Where it is stored:</strong> sign-in tokens are saved only on the owner's PC. Nothing is stored on any server run by LiveClipper, because there is none.</li>
+        <li><strong>Sharing:</strong> no data is sold, shared or sent anywhere except to TikTok and YouTube to upload the owner's clips.</li>
+        <li><strong>Other people:</strong> LiveClipper does not collect information about viewers or other users.</li>
+        <li><strong>Removing access:</strong> the owner can revoke access at any time in the TikTok app (Settings → Security → Manage app permissions) or in their Google account, and delete the token files from the PC.</li>
+      </ul>
+    </section>
+  </div>
+</main>
+</body>
+</html>
